@@ -1,22 +1,90 @@
-body {
-	margin: 0;
-	font-family: "Nunito", "Arial", "Helvetica", sans-serif;
+@keyframes showing {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
-h1 {
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.page {
 	height: 100vh;
+	width: 100vw;
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 20px;
-	color: #61dafb;
 }
-h1 img {
-	height: 50px;
-	animation: rotate 3s linear infinite;
+
+.mainColorCard {
+	width: 200px;
+	height: 400px;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
 }
-@keyframes rotate {
-	100% {
-		transform: rotate(360deg);
+
+.additionalColors {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.colorDescription {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+}
+
+	.colorDescription.bottom {
+		height: calc(100% - 50px);
+		padding-bottom: 50px;
+		justify-content: flex-end;
 	}
+
+	.colorDescription.center {
+		justify-content: center;
+	}
+
+	.colorDescription > span {
+		background-color: #00000058;
+		cursor: pointer;
+		color: #fff;
+		font-family: monospace;
+		padding: 5px 5px;
+		border-radius: 5px;
+	}
+
+.colorSteps {
+	margin-left: 20px;
+	display: flex;
+	gap: 10px;
+}
+
+.smallColorBox {
+	width: 180px;
+	height: 150px;
+	border-radius: 5px;
+}
+
+.popupIndoClipboard {
+	position: fixed;
+	top: 50vh;
+	left: 50vw;
+	transform: translate(-50%, -50%);
+	background-color: #222222;
+	padding: 5px 10px;
+	border-radius: 5px;
+	font-size: 15pt;
+	color: #fff;
+	font-family: monospace;
+	animation-name: showing;
+	animation-duration: 0.5s;
 }
