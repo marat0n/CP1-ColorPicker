@@ -16,10 +16,7 @@ const ColorDescription = props => {
     }
 
     return <div className={`colorDescription ${props.alignClass}`}>
-        <span
-            // onClick={() => {navigator.clipboard.writeText(`rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`)}}
-            onClick={() => {copyColor(`rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`)}}
-        >
+        <span onClick={() => {copyColor(`rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`)}}>
             RGB: {rgb.r}, {rgb.g}, {rgb.b}
         </span>
         <br />
